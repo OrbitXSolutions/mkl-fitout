@@ -5,15 +5,16 @@ import { useTranslations } from 'next-intl'
 import { Logo } from '../atoms/Logo'
 import { motion } from 'motion/react'
 import Image from 'next/image'
+import { useIsMobile } from '@/hooks/use-mobile'
 
 function HeroSection({ className = '' }) {
   const t = useTranslations('hero')
-
+ const isMobile = useIsMobile();
   return (
     <section id="home" className={`relative min-h-[70vh] flex items-center justify-center overflow-hidden ${className}`}>
       <motion.div
       initial={{ scale: 1 }}
-      animate={{ scale: [1, 1.15, 1, 1.20, 1], translateX: [0, 50, 0, -100, 0] }}
+      animate={{ scale:  [1, 1.15, 1, 1.20, 1], translateX: isMobile ? [0, 15, 0, -15, 0] : [0, 50, 0, -100, 0] }}
       className='relative inset-0 w-full min-h-[70vh]'
       transition={{
         duration: 20,
