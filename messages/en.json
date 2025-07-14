@@ -1,0 +1,84 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "gallery": "Gallery",
+    "stats": "Stats",
+    "contact": "Contact"
+  },
+  "hero": {
+    "headline": "Transforming Spaces, Inspiring Lives",
+    "subheadline": "Premium Interior Fit-Out & Custom Woodwork in the UAE",
+    "cta": "Coming Soon..."
+  },
+  "about": {
+    "title": "About Us",
+    "content": "MKL-Fitout is a specialized interior fit-out and woodwork company based in the UAE. With our in-house joinery factory and skilled design and execution teams, we provide complete interior solutions tailored to both residential and commercial projects."
+  },
+  "services": {
+    "title": "Our Services",
+    "woodwork": "Custom Woodwork & Joinery",
+    "fitout": "Interior Design & Fit-Out",
+    "concept": "3D Concept Design",
+    "renovation": "Full Renovation & Finishing"
+  },
+  "gallery": {
+    "title": "Our Projects"
+  },
+  "stats": {
+    "title": "Our Achievements",
+    "projects": "Projects Completed",
+    "clients": "Happy Clients",
+    "years": "Years of Experience",
+    "team": "Team Members",
+    "awards": "Awards Won"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "location": "Industrial Area, Dubai, UAE",
+    "email": "info@mklfitout.ae",
+    "phone": "+971 50 970 0715",
+    "cta": "Send Message",
+    "infoTitle": "Contact Information",
+    "address": "Address",
+    "formTitle": "Send us a Message",
+    "firstName": "First Name",
+    "firstNamePlaceholder": "John",
+    "lastName": "Last Name",
+    "lastNamePlaceholder": "Doe",
+    "emailPlaceholder": "john@example.com",
+    "subject": "Subject",
+    "subjectPlaceholder": "How can we help you?",
+    "message": "Message",
+    "messagePlaceholder": "Tell us more about your inquiry...",
+    "successDesc": "Your message has been sent successfully. We'll get back to you soon!",
+    "unexpectedError": "An unexpected error occurred. Please try again later.",
+    "sending": "Sending...",
+    "send": "Send Message",
+    "subtitle": "Have questions about our services? We're here to help you realize your vision."
+  },
+  "footer": {
+    "tagline": "Interiors & Wood Works – Dubai, UAE",
+    "quickLinks": "Quick Links",
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "services": "Services",
+      "gallery": "Gallery",
+      "contact": "Contact"
+    },
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "rights": "All rights reserved. MKL-Fitout © 2024"
+  },
+  "langSwitcher": {
+    "en": "English",
+    "ar": "العربية"
+  },
+  "seo": {
+    "title": "MKL-Fitout | Interior Fit-Out & Woodwork UAE",
+    "description": "Premium interior fit-out, custom woodwork, and joinery services in Dubai, UAE. Residential & commercial solutions with in-house production and expert teams."
+  }
+}
