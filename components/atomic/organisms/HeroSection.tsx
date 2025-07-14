@@ -11,7 +11,20 @@ function HeroSection({ className = '' }) {
 
   return (
     <section id="home" className={`relative min-h-[70vh] flex items-center justify-center overflow-hidden ${className}`}>
-      <Image
+      <motion.div
+      initial={{ scale: 1 }}
+      animate={{ scale: [1, 1.15, 1, 1.20, 1], translateX: [0, 50, 0, -100, 0] }}
+      className='relative inset-0 w-full min-h-[70vh]'
+      transition={{
+        duration: 20,
+        repeat: Infinity,
+        repeatType: 'reverse',
+        ease: 'easeInOut'
+      }}
+      style={{ display: 'inline-block' }}
+    >
+
+<Image
         src="/images/hero-image-placeholder.jpg"
         alt="Hero background"
         fill
@@ -19,6 +32,8 @@ function HeroSection({ className = '' }) {
         priority
         sizes="100vw"
       />
+    </motion.div>
+      
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="absolute inset-0 bg-black/40" />
         <motion.div
