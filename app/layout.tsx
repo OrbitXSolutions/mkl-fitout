@@ -56,10 +56,8 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function RootLayout({
   children,
-  searchParams,
 }: Readonly<{
   children: React.ReactNode;
-  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }>) {
 
   const locale = await getLocale();
