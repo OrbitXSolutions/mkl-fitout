@@ -3,6 +3,7 @@
 import { SectionTitle } from '../atoms/SectionTitle'
 import { useTranslations } from 'next-intl'
 import { motion } from 'motion/react'
+import { TextAnimate } from '@/components/magicui/text-animate'
 
 function AboutSection({ className = '' }) {
   const t = useTranslations('about')
@@ -16,10 +17,11 @@ function AboutSection({ className = '' }) {
         className="max-w-3xl mx-auto text-center"
       >
         <SectionTitle>{t('title')}</SectionTitle>
-        <p className="mt-6 text-lg md:text-xl text-gray-700 leading-relaxed">
-          {t('content')}
-        </p>
+      
       </motion.div>
+      <TextAnimate animation="slideUp" by="character" as="p" delay={0.3} duration={2} className="mt-6 text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto text-center">
+          {t('content')}
+        </TextAnimate>
     </section>
   )
 }

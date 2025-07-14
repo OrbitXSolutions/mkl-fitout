@@ -14,7 +14,7 @@ function GallerySection({ className = '' }) {
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
+        // viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.7 }}
         className="max-w-6xl mx-auto text-center"
       >
@@ -25,7 +25,7 @@ function GallerySection({ className = '' }) {
               key={i}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, amount: 0.2 }}
+              // viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.5, delay: i * 0.05 }}
               className="overflow-hidden rounded-lg shadow-md"
             >

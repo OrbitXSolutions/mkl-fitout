@@ -16,7 +16,7 @@ function ContactSection({ className = '' }) {
         <motion.aside
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
+          // viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.7 }}
           className="md:col-span-1 bg-white rounded-2xl shadow-lg p-8 flex flex-col gap-6 items-center md:items-start"
         >
