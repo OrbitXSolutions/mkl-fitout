@@ -2,6 +2,7 @@
 import { useTransition } from 'react'
 import { useRouter, usePathname, useSearchParams } from 'next/navigation'
 import { useLocale, useTranslations } from 'next-intl'
+import { toggleLanguage } from '@/app/_actions/lange-toggle'
 
 function LanguageSwitcher({ className = '' }) {
   const t = useTranslations('langSwitcher')
@@ -15,7 +16,8 @@ function LanguageSwitcher({ className = '' }) {
     if (nextLocale === locale) return
     const params = new URLSearchParams(Array.from(searchParams.entries()))
     params.set('lang', nextLocale)
-    startTransition(() => {
+    startTransition(async() => {
+      await toggleLanguage(nextLocale)
       router.replace(`${pathname}?${params.toString()}`)
     })
   }

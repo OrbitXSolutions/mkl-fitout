@@ -8,7 +8,7 @@ export async function middleware(request: NextRequest) {
   if (lang && lang !== locale) {
     request.cookies.set(COOKIES_KEYS.LOCALE, lang);
   }
-  return NextResponse.next()
+  return NextResponse.next({request})
 }
 
 export const config = {

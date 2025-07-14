@@ -24,10 +24,15 @@ export async function generateMetadata(): Promise<Metadata> {
   const seo = messages.seo || {}
   const title = seo.title || 'MKL-Fitout | Interior Fit-Out & Woodwork UAE'
   const description = seo.description || 'Premium interior fit-out, custom woodwork, and joinery services in Dubai, UAE. Residential & commercial solutions with in-house production and expert teams.'
-  const image = '/images/og-image.png'
+  const image = '/images/og-image.jpg'
   return {
     title,
     description,
+    keywords: ['MKL-Fitout', 'Interior Fit-Out', 'Woodwork', 'UAE', 'Dubai', 'Residential', 'Commercial', 'Production', 'Expert Teams',
+
+      // Arabic:
+      'مكل فيتوت', 'تصميم وتنفيذ المباني', 'أعمال الأثاث', 'الإمارة العربية المتحدة', 'دبي', 'منازل', 'مكاتب', 'إنتاج', 'فرق خبراء',
+    ],
     openGraph: {
       title,
       description,
@@ -50,6 +55,14 @@ export async function generateMetadata(): Promise<Metadata> {
       description,
       images: [image],
       site: '@mklfitout',
+    },
+    metadataBase: new URL("https://mklfitout.ae"),
+    alternates: {
+      canonical: "/",
+      languages: {
+        en: "/?lang=en",
+        ar: "/?lang=ar",
+      },
     },
   }
 }
