@@ -1,4 +1,4 @@
-export type Service = {
+export type Feature = {
     id: string
     titleKey: string
     summaryKey: string
@@ -7,7 +7,7 @@ export type Service = {
     features: string[]
 }
 
-export const services: Service[] = [
+export const features: Feature[] = [
     {
         id: 'joinery',
         titleKey: 'joinery.title',
@@ -42,7 +42,7 @@ export const services: Service[] = [
     }
 ]
 
-export async function getServices() {
+export async function getFeatures() {
     // Local data – simulate build-time fetch
-    return services
+    return features
 } 

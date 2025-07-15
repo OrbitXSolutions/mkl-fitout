@@ -3,7 +3,7 @@
 import { motion } from 'motion/react'
 import { useTranslations } from 'next-intl'
 import { ServiceCard } from '../molecules/ServiceCard'
-import { services } from '@/data/services'
+import { features } from '@/data/features'
 
 function AboutTwoColumn({ className = '' }) {
     const t = useTranslations('aboutPage')
@@ -40,7 +40,7 @@ function AboutTwoColumn({ className = '' }) {
                     transition={{ duration: 0.6 }}
                     className="grid grid-cols-1 sm:grid-cols-2 gap-6"
                 >
-                    {services.slice(0, 2).map((s, i) => (
+                    {features.slice(0, 2).map((s, i) => (
                         <ServiceCard key={s.id} service={s} index={i} />
                     ))}
                 </motion.div>
