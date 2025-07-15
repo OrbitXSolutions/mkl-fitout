@@ -7,6 +7,9 @@ import { COOKIES_KEYS } from "@/lib/constants/cookies-keys"
 import { RootWrapper } from "@/components/core/providers/root-wrapper"
 import { setCurrentLocale } from "./_actions/set-current-locale"
 import { getMessages } from "next-intl/server"
+import { NavBar } from "@/components/atomic/molecules/NavBar"
+import { Suspense } from "react"
+import { FooterSection } from "@/components/atomic/organisms/FooterSection"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,15 +26,15 @@ export async function generateMetadata(): Promise<Metadata> {
   const messages = await getMessages()
   const seo = messages.seo || {}
   const title = seo.title || 'MKL-Fitout | Interior Fit-Out & Woodwork UAE'
-  const description = seo.description || 'Premium interior fit-out, custom woodwork, and joinery services in Dubai, UAE. Residential & commercial solutions with in-house production and expert teams.'
+  const description = seo.description || 'Premium interior fit-out, custom woodwork, and joinery services in Ajman, UAE. Residential & commercial solutions with in-house production and expert teams.'
   const image = '/images/og-image.jpg'
   return {
     title,
     description,
-    keywords: ['MKL-Fitout', 'Interior Fit-Out', 'Woodwork', 'UAE', 'Dubai', 'Residential', 'Commercial', 'Production', 'Expert Teams',
+    keywords: ['MKL-Fitout', 'Interior Fit-Out', 'Woodwork', 'UAE', 'Ajman', 'Residential', 'Commercial', 'Production', 'Expert Teams',
 
       // Arabic:
-      'مكل فيتوت', 'تصميم وتنفيذ المباني', 'أعمال الأثاث', 'الإمارة العربية المتحدة', 'دبي', 'منازل', 'مكاتب', 'إنتاج', 'فرق خبراء',
+      'مكل فيتوت', 'تصميم وتنفيذ المباني', 'أعمال الأثاث', 'الإمارة العربية المتحدة', 'عجمان', 'منازل', 'مكاتب', 'إنتاج', 'فرق خبراء',
     ],
     openGraph: {
       title,
@@ -82,7 +85,17 @@ export default async function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <RootWrapper>{children}</RootWrapper>
+        <RootWrapper>
+          <div className="flex flex-col min-h-screen bg-background">
+            <Suspense fallback={null}>
+              <NavBar />
+            </Suspense>
+            <main className="flex-1 flex flex-col">
+              {children}
+            </main>
+            <FooterSection />
+          </div>
+        </RootWrapper>
       </body>
     </html>
   )

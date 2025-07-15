@@ -16,7 +16,7 @@ function LanguageSwitcher({ className = '' }) {
     if (nextLocale === locale) return
     const params = new URLSearchParams(Array.from(searchParams.entries()))
     params.set('lang', nextLocale)
-    startTransition(async() => {
+    startTransition(async () => {
       await toggleLanguage(nextLocale)
       router.replace(`${pathname}?${params.toString()}`)
     })
@@ -33,7 +33,7 @@ function LanguageSwitcher({ className = '' }) {
       type="button"
       onClick={() => switchLocale(nextLocale)}
       aria-label={label}
-      className={`px-2 py-1 rounded font-bold underline ${className}`}
+      className={`px-2 py-1 rounded font-bold underline ${className} cursor-pointer hover:text-gray-100`}
       disabled={isPending}
     >
       {label}

@@ -4,22 +4,19 @@ import { Logo } from '../atoms/Logo'
 import { LanguageSwitcher } from '../atoms/LanguageSwitcher'
 import { useTranslations } from 'next-intl'
 import { motion } from 'motion/react'
+import { Button } from '@/components/ui/button'
+import Link from 'next/link'
 
 const NAV_LINKS = [
-  { id: 'home', key: 'nav.home' },
-  { id: 'about', key: 'nav.about' },
-  { id: 'services', key: 'nav.services' },
-  { id: 'gallery', key: 'nav.gallery' },
-  { id: 'stats', key: 'nav.stats' },
-  { id: 'contact', key: 'nav.contact' },
+  { route: '/', key: 'nav.home' },
+  { route: '/about', key: 'nav.about' },
+  { route: '/services', key: 'nav.services' },
+  { route: '/#gallery', key: 'nav.gallery' },
+  // { route: '/#stats', key: 'nav.stats' },
+  { route: '/about#contact', key: 'nav.contact' },
 ]
 
-function scrollToSection(id: string) {
-  const el = document.getElementById(id)
-  if (el) {
-    el.scrollIntoView({ behavior: 'smooth', block: 'start' })
-  }
-}
+
 
 function NavBar({ className = '' }) {
   const t = useTranslations()
@@ -35,14 +32,12 @@ function NavBar({ className = '' }) {
       </div>
       <ul className="hidden md:flex gap-6 text-base font-medium">
         {NAV_LINKS.map(link => (
-          <li key={link.id}>
-            <button
-              type="button"
-              onClick={() => scrollToSection(link.id)}
-              className="hover:text-primary transition-colors"
-            >
+          <li key={link.route}>
+
+            <Link href={link.route}>
               {t(link.key)}
-            </button>
+            </Link>
+
           </li>
         ))}
       </ul>

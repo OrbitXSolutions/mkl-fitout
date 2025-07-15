@@ -21,7 +21,11 @@
     "woodwork": "Custom Woodwork & Joinery",
     "fitout": "Interior Design & Fit-Out",
     "concept": "3D Concept Design",
-    "renovation": "Full Renovation & Finishing"
+    "renovation": "Full Renovation & Finishing",
+    "learnMore": "Learn More",
+    "expertise": "Our Expertise",
+    "OurServices": "Our Services",
+    "contact": "Contact Us"
   },
   "gallery": {
     "title": "Our Projects"
@@ -36,7 +40,7 @@
   },
   "contact": {
     "title": "Contact Us",
-    "location": "Industrial Area, Dubai, UAE",
+    "location": "Industrial Area, Ajman, UAE",
     "email": "info@mklfitout.ae",
     "phone": "+971 50 970 0715",
     "cta": "Send Message",
@@ -59,7 +63,7 @@
     "subtitle": "Have questions about our services? We're here to help you realize your vision."
   },
   "footer": {
-    "tagline": "Interiors & Wood Works – Dubai, UAE",
+    "tagline": "Interiors & Wood Works – Ajman, UAE",
     "quickLinks": "Quick Links",
     "nav": {
       "home": "Home",
@@ -79,6 +83,56 @@
   },
   "seo": {
     "title": "MKL-Fitout | Interior Fit-Out & Woodwork UAE",
-    "description": "Premium interior fit-out, custom woodwork, and joinery services in Dubai, UAE. Residential & commercial solutions with in-house production and expert teams."
+    "description": "Premium interior fit-out, custom woodwork, and joinery services in Ajman, UAE. Residential & commercial solutions with in-house production and expert teams."
+  },
+  "servicesHero": {
+    "title": "Our Services",
+    "subtitle": "Discover the craftsmanship and solutions we offer."
+  },
+  "trustBanner": {
+    "headline": "Trusted by 100+ clients"
+  },
+  "aboutPage": {
+    "visionTitle": "Our Vision",
+    "visionText": "To be one of the UAE's leading interior and woodwork companies known for quality, reliability, and timeless design—transforming ordinary spaces into exceptional experiences.",
+    "missionTitle": "Our Mission",
+    "missionText": "Deliver complete interior solutions that exceed client expectations through precision, creativity, and in-house craftsmanship."
+  },
+  "legal": {
+    "terms": "Terms of Use",
+    "privacy": "Privacy Policy",
+    "lastUpdated": "Last updated:"
+  },
+  "servicesDetail": {
+    "joinery": {
+      "title": "Custom Joinery",
+      "summary": "Tailor-made doors, cabinets and bespoke woodwork.",
+      "feature1": "Handcrafted furniture & cabinetry",
+      "feature2": "Premium wood selection",
+      "feature3": "Precision measurements"
+    },
+    "fitout": {
+      "title": "Interior Fit-Out",
+      "summary": "Turn-key solutions for residential and commercial spaces.",
+      "feature1": "Complete space planning",
+      "feature2": "MEP coordination",
+      "feature3": "Project management"
+    },
+    "design": {
+      "title": "3D Concept Design",
+      "summary": "Photo-realistic visualisations that bring ideas to life.",
+      "feature1": "Immersive 3D modeling",
+      "feature2": "Virtual walkthroughs",
+      "feature3": "Material selection"
+    },
+    "renovation": {
+      "title": "Full Renovation",
+      "summary": "Complete finishing, MEP, flooring, ceilings & more.",
+      "feature1": "Structural modifications",
+      "feature2": "Systems integration",
+      "feature3": "Quality finishing"
+    },
+    "learnMore": "Explore Service",
+    "contact": "Contact Us"
   }
 }

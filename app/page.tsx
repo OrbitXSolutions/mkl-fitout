@@ -10,19 +10,13 @@ import { FooterSection } from '@/components/atomic/organisms/FooterSection'
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen bg-background">
-      <Suspense fallback={null}>
-        <NavBar />
-      </Suspense>
-      <main className="flex-1 flex flex-col">
-        <HeroSection />
-        <AboutSection />
-        <ServicesSection />
-        <GallerySection />
-        {/* <StatsSection /> */}
-        <ContactSection />
-      </main>
-      <FooterSection />
-    </div>
+    <>
+      <HeroSection />
+      <AboutSection />
+      <ServicesSection />
+      <GallerySection />
+      {/* <StatsSection /> */}
+      <ContactSection />
+    </>
   )
 }

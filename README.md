@@ -1,3 +1,13 @@
+# MKL-Fitout Website
+
+## Knowledge Cache Refresh with Context7
+
+This project uses [Context7](https://context7.ai) during development to pull the latest best-practice snippets for libraries such as **Framer Motion**. The `mcp_context7_*` helper calls found in commit history resolve a library ID and fetch concise docs before we generate or refactor code. This ensures that animations, accessibility patterns and server-component guidelines stay in sync with upstream changes.
+
+Developers can trigger a manual refresh by re-running the resolve/get-library-docs helpers for a given dependency (e.g. `framer/motion`). These calls are **not** bundled with the production build; they only run at author-time and never reach the client.
+
+---
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started

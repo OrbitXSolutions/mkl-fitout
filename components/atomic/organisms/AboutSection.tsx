@@ -17,11 +17,11 @@ function AboutSection({ className = '' }) {
         className="max-w-3xl mx-auto text-center"
       >
         <SectionTitle>{t('title')}</SectionTitle>
-      
+
       </motion.div>
-      <TextAnimate animation="slideUp" by="character" as="p" delay={0.3} duration={2} className="mt-6 text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto text-center">
-          {t('content')}
-        </TextAnimate>
+      <TextAnimate animation="slideUp" by="word" as="p" delay={0.3} duration={2} className="mt-6 text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto text-center">
+        {t('content')}
+      </TextAnimate>
     </section>
   )
 }

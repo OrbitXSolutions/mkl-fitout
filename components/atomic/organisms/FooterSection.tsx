@@ -4,6 +4,7 @@ import { CONTACT_INFO } from '@/lib/constants/contact-info'
 import { useTranslations } from 'next-intl'
 import { motion } from 'motion/react'
 import { Logo } from '../atoms/Logo'
+import Link from 'next/link'
 
 function FooterSection({ className = '' }) {
   const t = useTranslations('footer')
@@ -22,7 +23,7 @@ function FooterSection({ className = '' }) {
         <div className="flex-1 flex flex-col gap-3 items-start">
           <Logo className="w-10 h-10" />
           <span className="text-xl font-bold tracking-wide mt-2">MKL-Fitout</span>
-          <span className="text-sm text-neutral-400 max-w-xs">{t('tagline', { defaultValue: 'Interiors & Wood Works – Dubai, UAE' })}</span>
+          <span className="text-sm text-neutral-400 max-w-xs">{t('tagline', { defaultValue: 'Interiors & Wood Works – Ajman, UAE' })}</span>
         </div>
         {/* Navigation */}
         <nav aria-label="Footer" className="flex-1 flex flex-col gap-2 md:items-center">
@@ -50,11 +51,11 @@ function FooterSection({ className = '' }) {
       </motion.div>
       <div className="border-t border-neutral-800 mt-10 pt-6 text-xs text-neutral-400 flex flex-col md:flex-row md:justify-between max-w-7xl mx-auto gap-2">
         <span>&copy; {year} MKL-Fitout. {t('rights', { defaultValue: 'All rights reserved.' })}</span>
-        {/* <span>
-          <a href="#" className="hover:text-primary">{t('privacy', { defaultValue: 'Privacy Policy' })}</a>
+        <span>
+          <Link href="/legal?tab=privacy" className="hover:text-primary">{t('privacy', { defaultValue: 'Privacy Policy' })}</Link>
           {' | '}
-          <a href="#" className="hover:text-primary">{t('terms', { defaultValue: 'Terms of Use' })}</a>
-        </span> */}
+          <Link href="/legal?tab=terms" className="hover:text-primary">{t('terms', { defaultValue: 'Terms of Use' })}</Link>
+        </span>
       </div>
     </footer>
   )
