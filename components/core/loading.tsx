@@ -6,7 +6,7 @@ import { TypingAnimation } from '@/components/magicui/typing-animation'
 import { SparklesText } from '@/components/magicui/sparkles-text'
 import { cn } from '@/lib/utils'
 
-export default function Loading() {
+function AppLoading() {
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-br from-background via-background to-muted/30 backdrop-blur-sm">
             {/* Animated Background Elements */}
@@ -138,3 +138,5 @@ export default function Loading() {
         </div>
     )
 }
+
+export default { AppLoading };
