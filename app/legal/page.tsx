@@ -8,10 +8,10 @@ export const metadata = {
 export default function LegalPage() {
     const lastUpdated = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })
     return (
-        <main className="py-16 px-4 bg-white min-h-screen">
+        <div className="py-16 px-4 bg-white min-h-screen">
             <div className="max-w-4xl mx-auto">
                 <LegalTabs lastUpdated={lastUpdated} />
             </div>
-        </main>
+        </div>
     )
 } 

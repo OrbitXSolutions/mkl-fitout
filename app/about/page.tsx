@@ -8,9 +8,9 @@ export const metadata = {
 
 export default function AboutContactPage() {
     return (
-        <main>
+        <div>
             <AboutTwoColumn />
             <ContactSection />
-        </main>
+        </div>
     )
 } 

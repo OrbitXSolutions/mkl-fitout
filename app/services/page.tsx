@@ -4,6 +4,7 @@ import { ServicesHero } from '@/components/atomic/organisms/ServicesHero'
 import { TrustBanner } from '@/components/atomic/organisms/TrustBanner'
 import { GallerySection } from '@/components/atomic/organisms/GallerySection'
 import { ServiceIconKey } from '@/components/atomic/atoms/ServiceIcons'
+import { ContactSection } from '@/components/atomic/organisms/ContactSection'
 
 
 export const metadata = {
@@ -14,7 +15,7 @@ export const metadata = {
 export default async function ServicesPage() {
     const services = await getFeatures()
     return (
-        <main>
+        <>
             {/* Hero */}
             <ServicesHero />
             {/* Grid */}
@@ -24,6 +25,8 @@ export default async function ServicesPage() {
             />
             {/* Trust banner */}
             {/* <TrustBanner /> */}
-        </main>
+
+            <ContactSection />
+        </>
     )
 } 
