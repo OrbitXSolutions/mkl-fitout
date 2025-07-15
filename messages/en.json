@@ -10,7 +10,7 @@
   "hero": {
     "headline": "Transforming Spaces, Inspiring Lives",
     "subheadline": "Premium Interior Fit-Out & Custom Woodwork in the UAE",
-    "cta": "Coming Soon..."
+    "cta": "Contact Us"
   },
   "about": {
     "title": "About Us",
@@ -25,10 +25,31 @@
     "learnMore": "Learn More",
     "expertise": "Our Expertise",
     "OurServices": "Our Services",
-    "contact": "Contact Us"
+    "contact": "Contact Us",
+    "joinery": {
+      "title": "Custom Woodwork & Joinery",
+      "summary": "Premium quality doors, wardrobes, kitchen cabinets, wall claddings, and custom furniture crafted in our in-house joinery factory."
+    },
+    "fitout": {
+      "title": "Interior Design & Fit-Out",
+      "summary": "Complete turnkey interior solutions for villas, apartments, offices, clinics, restaurants, and retail spaces."
+    },
+    "design": {
+      "title": "3D Concept Design",
+      "summary": "Realistic 3D visualizations and conceptual designs to help you envision your dream space before execution."
+    },
+    "renovation": {
+      "title": "Full Renovation & Finishing",
+      "summary": "Comprehensive renovation services including painting, flooring, ceilings, partitions, lighting, and electrical work."
+    }
+  },
+  "features": {
+    "title": "What We Offer",
+    "subtitle": "Discover our comprehensive range of interior solutions tailored to transform your space into something extraordinary."
   },
   "gallery": {
-    "title": "Our Projects"
+    "title": "Our Services",
+    "subtitle": "Explore our portfolio of stunning interior transformations across different categories."
   },
   "stats": {
     "title": "Our Achievements",
@@ -37,6 +58,10 @@
     "years": "Years of Experience",
     "team": "Team Members",
     "awards": "Awards Won"
+  },
+  "renders": {
+    "title": "Create Stunning Renders",
+    "subtitle": "With just a click of a button, our cutting-edge technology can transform your ideas into stunning, realistic visuals that will take your project to the next level."
   },
   "contact": {
     "title": "Contact Us",

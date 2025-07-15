@@ -2,13 +2,14 @@
 
 import { SectionTitle } from '../atoms/SectionTitle'
 import { CONTACT_INFO } from '@/lib/constants/contact-info'
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import { motion } from 'motion/react'
 import { ContactForm } from './ContactForm'
 import { Mail, Phone, MapPin, Globe } from 'lucide-react'
 
 function ContactSection({ className = '' }) {
-  const t = useTranslations('contact')
+  const t = useTranslations('contact');
+  const locale = useLocale();
   return (
     <section id="contact" className={`py-16 px-4 bg-gray-50 ${className}`}>
       <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
@@ -24,7 +25,7 @@ function ContactSection({ className = '' }) {
           <div className="flex flex-col gap-4 w-full">
             <div className="flex items-center gap-3 text-lg">
               <MapPin className="text-primary w-6 h-6 flex-shrink-0" />
-              <span className="font-medium">{CONTACT_INFO.address}</span>
+              <span className="font-medium">{locale === 'ar' ? CONTACT_INFO.addressAr : CONTACT_INFO.address}</span>
             </div>
             <div className="flex items-center gap-3 text-lg">
               <Mail className="text-primary w-6 h-6 flex-shrink-0" />

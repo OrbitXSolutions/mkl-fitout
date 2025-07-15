@@ -8,6 +8,7 @@ import Image from 'next/image'
 import { useIsMobile } from '@/hooks/use-mobile'
 import { useEffect, useRef, useState } from 'react'
 import { TextAnimate } from '@/components/magicui/text-animate'
+import { CONTACT_INFO } from '@/lib/constants/contact-info'
 
 function HeroSection({ className = '' }) {
   const t = useTranslations('hero')
@@ -62,6 +63,10 @@ function HeroSection({ className = '' }) {
           </div>
 
           <motion.button
+            onClick={() => {
+              const whatsappUrl = CONTACT_INFO.whatsapp;
+              window.open(whatsappUrl, '_blank', 'noopener,noreferrer')
+            }}
             animate={{
               scale: [1, 1.08, 1],
               boxShadow: [

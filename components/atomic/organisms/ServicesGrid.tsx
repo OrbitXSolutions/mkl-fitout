@@ -2,11 +2,11 @@
 
 import { motion } from 'motion/react'
 import { ServiceCard } from '../molecules/ServiceCard'
-import type { Service } from '@/data/services'
+import type { Feature } from '@/data/features'
 import { useTranslations } from 'next-intl'
 
 interface ServicesGridProps {
-    services: Service[]
+    services: Feature[]
 }
 
 function ServicesGrid({ services }: ServicesGridProps) {

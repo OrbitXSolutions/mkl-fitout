@@ -1,22 +1,55 @@
-import { Suspense } from 'react'
-import { NavBar } from '@/components/atomic/molecules/NavBar'
+'use client'
+
+import React, { useState } from 'react'
 import { HeroSection } from '@/components/atomic/organisms/HeroSection'
 import { AboutSection } from '@/components/atomic/organisms/AboutSection'
-import { ServicesSection } from '@/components/atomic/organisms/ServicesSection'
+import { DesignSection } from '@/components/atomic/organisms/DesignSection'
+import { RendersCarousel } from '@/components/atomic/organisms/RendersCarousel'
+import { FeaturesSection } from '@/components/atomic/organisms/FeaturesSection'
 import { GallerySection } from '@/components/atomic/organisms/GallerySection'
-import { StatsSection } from '@/components/atomic/organisms/StatsSection'
 import { ContactSection } from '@/components/atomic/organisms/ContactSection'
-import { FooterSection } from '@/components/atomic/organisms/FooterSection'
+import { StatsSection } from '@/components/atomic/organisms/StatsSection'
+import { TrustBanner } from '@/components/atomic/organisms/TrustBanner'
+import { Feature } from '@/data/features'
+import { ServiceIconKey } from '@/components/atomic/atoms/ServiceIcons'
 
-export default function Home() {
+function HomePage() {
+  const [selectedCategory, setSelectedCategory] = useState<ServiceIconKey | 'all'>('all')
+
+  const handleFeatureSelect = (feature: Feature) => {
+    // Map feature IDs to service categories for filtering
+    const featureToCategory: Record<string, ServiceIconKey> = {
+      'joinery': 'bedroom', // Custom woodwork maps to bedroom
+      'interior-fitout': 'living-room', // Interior fitout maps to living room
+      '3d-design': 'office', // 3D design maps to office
+      'renovation': 'kitchen' // Renovation maps to kitchen
+    }
+
+    const category = featureToCategory[feature.id]
+    if (category) {
+      setSelectedCategory(category)
+    }
+  }
+
   return (
-    <>
+    <main>
       <HeroSection />
       <AboutSection />
-      <ServicesSection />
-      <GallerySection />
-      {/* <StatsSection /> */}
+
+      <RendersCarousel />
+      <FeaturesSection
+        onFeatureSelect={handleFeatureSelect}
+      />
+      <GallerySection
+        activeCategory={selectedCategory}
+        onCategoryChange={setSelectedCategory}
+      />
+      {/* <StatsSection />
+      <TrustBanner /> */}
+      <DesignSection />
       <ContactSection />
-    </>
+    </main>
   )
 }
+
+export default HomePage

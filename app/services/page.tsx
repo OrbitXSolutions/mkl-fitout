@@ -1,4 +1,4 @@
-import { getServices } from '@/data/services'
+import { getFeatures } from '@/data/features'
 import { ServicesGrid } from '@/components/atomic/organisms/ServicesGrid'
 import { ServicesHero } from '@/components/atomic/organisms/ServicesHero'
 import { TrustBanner } from '@/components/atomic/organisms/TrustBanner'
@@ -9,7 +9,7 @@ export const metadata = {
 }
 
 export default async function ServicesPage() {
-    const services = await getServices()
+    const services = await getFeatures()
     return (
         <main>
             {/* Hero */}

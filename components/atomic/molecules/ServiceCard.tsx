@@ -3,10 +3,10 @@
 import Image from 'next/image'
 import { motion } from 'motion/react'
 import { useTranslations } from 'next-intl'
-import type { Service } from '@/data/services'
+import type { Feature } from '@/data/features'
 
 interface ServiceCardProps {
-    service: Service
+    service: Feature
     index: number
 }
 
