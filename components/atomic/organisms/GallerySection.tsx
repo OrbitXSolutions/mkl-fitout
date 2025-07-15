@@ -11,13 +11,29 @@ import { galleryImages, getImagesByCategory, GalleryImage } from '@/data/gallery
 import { cn } from '@/lib/utils'
 import { ImagePreview } from '../molecules/ImagePreview'
 
+// Helper function to get translated image data
+function useTranslatedImages(images: GalleryImage[]) {
+  const t = useTranslations('gallery.images')
+
+  return images.map(image => {
+    const translatedData = t.raw(image.id) as { alt: string; tags: string[] } | undefined
+
+    return {
+      ...image,
+      alt: translatedData?.alt || image.alt,
+      tags: translatedData?.tags || image.tags
+    }
+  })
+}
+
 interface GalleryItemProps {
   image: GalleryImage
   index: number
   onClick: () => void
+  t: (key: string) => string
 }
 
-function GalleryItem({ image, index, onClick }: GalleryItemProps) {
+function GalleryItem({ image, index, onClick, t }: GalleryItemProps) {
   return (
     <motion.div
       layout
@@ -77,7 +93,7 @@ function GalleryItem({ image, index, onClick }: GalleryItemProps) {
                   />
                 </svg>
               </div>
-              <p className="text-sm font-medium">View Details</p>
+              <p className="text-sm font-medium">{t('viewDetails')}</p>
             </motion.div>
           </motion.div>
         </div>
@@ -142,7 +158,8 @@ function GallerySection({
     setActiveCategory(initialCategory)
   }, [initialCategory])
 
-  const filteredImages = getImagesByCategory(activeCategory)
+  const rawFilteredImages = getImagesByCategory(activeCategory)
+  const filteredImages = useTranslatedImages(rawFilteredImages)
 
   return (
     <section id="gallery" className={cn("py-20 px-4 bg-gradient-to-br from-white via-gray-50 to-white", className)}>
@@ -188,6 +205,7 @@ function GallerySection({
                 image={image}
                 index={index}
                 onClick={() => setSelectedImage(image)}
+                t={t}
               />
             ))}
           </motion.div>
@@ -216,10 +234,10 @@ function GallerySection({
               </svg>
             </div>
             <h3 className="text-xl font-semibold text-gray-900 mb-2">
-              No images found
+              {t('noImagesFound')}
             </h3>
             <p className="text-gray-600">
-              We're still working on adding images for this category.
+              {t('noImagesDesc')}
             </p>
           </motion.div>
         )}

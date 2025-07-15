@@ -33,7 +33,7 @@ function LanguageSwitcher({ className = '' }) {
       type="button"
       onClick={() => switchLocale(nextLocale)}
       aria-label={label}
-      className={`px-2 py-1 rounded font-bold underline ${className} cursor-pointer hover:text-gray-100`}
+      className={`px-2 py-1 rounded font-bold  ${className} cursor-pointer hover:text-gray-100`}
       disabled={isPending}
     >
       {label}

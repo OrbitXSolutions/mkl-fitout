@@ -32,7 +32,7 @@ function HomePage() {
   }
 
   return (
-    <main>
+    <div className='overflow-auto'>
       <HeroSection />
       <AboutSection />
 
@@ -48,7 +48,7 @@ function HomePage() {
       <TrustBanner /> */}
       <DesignSection />
       <ContactSection />
-    </main>
+    </div>
   )
 }
 

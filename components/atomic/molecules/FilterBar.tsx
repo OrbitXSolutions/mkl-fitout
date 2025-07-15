@@ -2,6 +2,7 @@
 
 import React from 'react'
 import { motion } from 'motion/react'
+import { useTranslations } from 'next-intl'
 import { serviceIcons, ServiceIconKey } from '../atoms/ServiceIcons'
 import { serviceCategories, getAllCategories } from '@/data/gallery'
 import { cn } from '@/lib/utils'
@@ -14,12 +15,13 @@ interface FilterButtonProps {
 }
 
 function FilterButton({ category, isActive, onClick, index }: FilterButtonProps) {
+    const t = useTranslations('gallery.categories')
     const IconComponent = category !== 'all' ? serviceIcons[category] : null
     const categoryInfo = category !== 'all' ? serviceCategories[category] : {
-        name: 'All',
         color: '#6b7280',
         bgColor: '#f9fafb'
     }
+    const categoryName = t(category)
 
     return (
         <motion.button
@@ -93,7 +95,7 @@ function FilterButton({ category, isActive, onClick, index }: FilterButtonProps)
 
             {/* Text */}
             <span className="relative z-10 transition-all duration-300">
-                {categoryInfo.name}
+                {categoryName}
             </span>
 
             {/* Active indicator */}

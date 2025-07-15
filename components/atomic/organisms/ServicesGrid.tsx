@@ -36,7 +36,7 @@ function ServicesGrid({ services }: ServicesGridProps) {
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ delay: 0.2, duration: 0.6 }}
                     >
-                        {t('OurServices')}
+                        {t('expertise')}
                     </motion.h2>
                     <motion.div
                         initial={{ width: 0 }}
@@ -87,7 +87,7 @@ function ServicesGrid({ services }: ServicesGridProps) {
                 </motion.div>
 
                 {/* Bottom CTA section */}
-                <motion.div
+                {/* <motion.div
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.6, duration: 0.8 }}
@@ -110,7 +110,7 @@ function ServicesGrid({ services }: ServicesGridProps) {
                             transition={{ duration: 0.6 }}
                         />
                     </motion.button>
-                </motion.div>
+                </motion.div> */}
             </div>
         </section>
     )

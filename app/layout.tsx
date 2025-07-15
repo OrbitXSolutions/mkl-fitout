@@ -87,9 +87,7 @@ export default async function RootLayout({
       >
         <RootWrapper>
           <div className="flex flex-col min-h-screen bg-background">
-            <Suspense fallback={null}>
-              <NavBar />
-            </Suspense>
+            <NavBar />
             <main className="flex-1 flex flex-col">
               {children}
             </main>

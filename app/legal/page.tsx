@@ -1,8 +1,8 @@
 import { LegalTabs } from '@/components/atomic/organisms/LegalTabs'
 
 export const metadata = {
-    title: 'Legal | MKL-Fitout',
-    description: 'Terms of Use and Privacy Policy information.'
+    title: 'Legal Information | MKL-Fitout',
+    description: 'Terms of Use and Privacy Policy for MKL-Fitout interior design and woodwork services in UAE. Learn about our service agreements, warranties, and data protection policies.'
 }
 
 export default function LegalPage() {

@@ -59,12 +59,12 @@ function DesignSection({ className = '' }: DesignSectionProps) {
 
                     {/* Image Side */}
                     <motion.div
-                        initial={{ opacity: 0, x: -40 }}
-                        whileInView={{ opacity: 1, x: 0 }}
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.8, ease: [0.645, 0.045, 0.355, 1] }}
-                        className="relative overflow-hidden rounded-3xl"
+                        className="relative  rounded-3xl"
                     >
-                        <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl">
+                        <div className="relative aspect-[4/3] rounded-3xl  shadow-2xl">
                             <Image
                                 src="/images/gallary/3d-rendering-luxury-modern-bedroom-suite-hotel-with-tv-cabinet.jpg"
                                 alt="Modern interior design showcase"
@@ -89,7 +89,7 @@ function DesignSection({ className = '' }: DesignSectionProps) {
 
                         {/* Background decorative circles */}
                         <motion.div
-                            className="absolute -top-8 -left-8 w-32 h-32 bg-gradient-to-br from-amber-200/30 to-orange-300/30 rounded-full -z-10"
+                            className="absolute -top-8 -left-8 z-50 w-32 h-32 bg-gradient-to-br from-amber-200/30 to-orange-300/30 rounded-full -z-10"
                             animate={{
                                 scale: [1, 1.1, 1],
                                 rotate: [0, 180, 360],
@@ -101,7 +101,7 @@ function DesignSection({ className = '' }: DesignSectionProps) {
                             }}
                         />
                         <motion.div
-                            className="absolute -bottom-6 -right-6 w-24 h-24 bg-gradient-to-br from-blue-200/30 to-purple-300/30 rounded-full -z-10"
+                            className="absolute -bottom-6 -right-6 z-50 w-24 h-24 bg-gradient-to-br from-blue-200/30 to-purple-300/30 rounded-full -z-10"
                             animate={{
                                 scale: [1, 1.2, 1],
                                 rotate: [360, 180, 0],
@@ -116,8 +116,8 @@ function DesignSection({ className = '' }: DesignSectionProps) {
 
                     {/* Content Side */}
                     <motion.div
-                        initial={{ opacity: 0, x: 40 }}
-                        whileInView={{ opacity: 1, x: 0 }}
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.8, delay: 0.2, ease: [0.645, 0.045, 0.355, 1] }}
                         className={`${locale === 'ar' ? 'text-right' : 'text-left'}`}
                     >
@@ -139,15 +139,15 @@ function DesignSection({ className = '' }: DesignSectionProps) {
 
                         <div className="space-y-6 mb-10">
                             {currentContent.description.map((paragraph, index) => (
-                                <motion.p
+                                <p
                                     key={index}
                                     className="text-lg text-gray-700 leading-relaxed"
-                                    initial={{ opacity: 0, y: 20 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+                                // initial={{ opacity: 0, y: 20 }}
+                                // whileInView={{ opacity: 1, y: 0 }}
+                                // transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
                                 >
                                     {paragraph}
-                                </motion.p>
+                                </p>
                             ))}
                         </div>
 

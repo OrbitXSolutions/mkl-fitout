@@ -2,6 +2,9 @@ import { getFeatures } from '@/data/features'
 import { ServicesGrid } from '@/components/atomic/organisms/ServicesGrid'
 import { ServicesHero } from '@/components/atomic/organisms/ServicesHero'
 import { TrustBanner } from '@/components/atomic/organisms/TrustBanner'
+import { GallerySection } from '@/components/atomic/organisms/GallerySection'
+import { ServiceIconKey } from '@/components/atomic/atoms/ServiceIcons'
+
 
 export const metadata = {
     title: 'Services | MKL-Fitout',
@@ -16,6 +19,9 @@ export default async function ServicesPage() {
             <ServicesHero />
             {/* Grid */}
             <ServicesGrid services={services} />
+            <GallerySection
+
+            />
             {/* Trust banner */}
             {/* <TrustBanner /> */}
         </main>

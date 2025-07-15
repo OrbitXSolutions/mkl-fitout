@@ -49,7 +49,167 @@
   },
   "gallery": {
     "title": "Our Services",
-    "subtitle": "Explore our portfolio of stunning interior transformations across different categories."
+    "subtitle": "Explore our portfolio of stunning interior transformations across different categories.",
+    "categories": {
+      "all": "All",
+      "apartment": "Apartment",
+      "house": "House",
+      "bathroom": "Bathroom",
+      "kitchen": "Kitchen",
+      "bedroom": "Bedroom",
+      "living-room": "Living Room",
+      "office": "Office",
+      "cafe-restaurant": "Cafe/Restaurant",
+      "classroom": "Classroom"
+    },
+    "images": {
+      "apartment-1": {
+        "alt": "Luxury minimalist apartment interior",
+        "tags": [
+          "Modern",
+          "Luxury",
+          "Minimalist"
+        ]
+      },
+      "apartment-2": {
+        "alt": "Modern apartment living space",
+        "tags": [
+          "Contemporary",
+          "Open Plan"
+        ]
+      },
+      "house-1": {
+        "alt": "Classic house interior design",
+        "tags": [
+          "Classic",
+          "Traditional",
+          "Elegant"
+        ]
+      },
+      "house-2": {
+        "alt": "Traditional house living room",
+        "tags": [
+          "Traditional",
+          "Warm",
+          "Classic"
+        ]
+      },
+      "bathroom-1": {
+        "alt": "Modern bathroom design",
+        "tags": [
+          "Modern",
+          "Clean",
+          "Spa-like"
+        ]
+      },
+      "kitchen-1": {
+        "alt": "Modern kitchen with black wooden table",
+        "tags": [
+          "Modern",
+          "Wood",
+          "Minimalist"
+        ]
+      },
+      "bedroom-1": {
+        "alt": "Luxury bedroom suite design",
+        "tags": [
+          "Luxury",
+          "Hotel Style",
+          "Modern"
+        ]
+      },
+      "bedroom-2": {
+        "alt": "Bedroom with built-in wardrobe",
+        "tags": [
+          "Luxury",
+          "Storage",
+          "Wardrobe"
+        ]
+      },
+      "bedroom-3": {
+        "alt": "Modern bedroom with TV cabinet",
+        "tags": [
+          "Modern",
+          "Entertainment",
+          "Luxury"
+        ]
+      },
+      "bedroom-4": {
+        "alt": "Cozy bedroom interior",
+        "tags": [
+          "Cozy",
+          "Warm",
+          "Illustration"
+        ]
+      },
+      "bedroom-5": {
+        "alt": "Elegant bed arrangement",
+        "tags": [
+          "Elegant",
+          "Styling",
+          "Luxury"
+        ]
+      },
+      "bedroom-6": {
+        "alt": "Comfortable bedroom setup",
+        "tags": [
+          "Comfort",
+          "Cozy",
+          "Arrangement"
+        ]
+      },
+      "bedroom-7": {
+        "alt": "Stylish bedroom decor",
+        "tags": [
+          "Stylish",
+          "Decor",
+          "Modern"
+        ]
+      },
+      "living-room-1": {
+        "alt": "Digital lavender living room design",
+        "tags": [
+          "Digital",
+          "Colorful",
+          "Modern"
+        ]
+      },
+      "office-1": {
+        "alt": "Luxury office lounge area",
+        "tags": [
+          "Luxury",
+          "Lounge",
+          "Professional"
+        ]
+      },
+      "cafe-1": {
+        "alt": "Elegant restaurant interior with white tables",
+        "tags": [
+          "Elegant",
+          "Fine Dining",
+          "Modern"
+        ]
+      },
+      "cafe-2": {
+        "alt": "Restaurant hall with mixed table arrangements",
+        "tags": [
+          "Casual",
+          "Plants",
+          "Spacious"
+        ]
+      },
+      "cafe-3": {
+        "alt": "Modern restaurant design",
+        "tags": [
+          "Modern",
+          "Contemporary",
+          "Stylish"
+        ]
+      }
+    },
+    "viewDetails": "View Details",
+    "noImagesFound": "No images found",
+    "noImagesDesc": "We're still working on adding images for this category."
   },
   "stats": {
     "title": "Our Achievements",
@@ -126,7 +286,81 @@
   "legal": {
     "terms": "Terms of Use",
     "privacy": "Privacy Policy",
-    "lastUpdated": "Last updated:"
+    "lastUpdated": "Last updated:",
+    "termsContent": {
+      "title": "Terms of Use",
+      "section1": {
+        "title": "1. Agreement to Terms",
+        "content": "By accessing and using MKL-Fitout's services, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service."
+      },
+      "section2": {
+        "title": "2. Services Description",
+        "content": "MKL-Fitout provides interior design, fit-out, custom woodwork, and renovation services for residential and commercial properties in the UAE. Our services include but are not limited to: custom joinery, kitchen design, bedroom fit-outs, bathroom renovations, office interiors, restaurant fit-outs, and 3D design visualization."
+      },
+      "section3": {
+        "title": "3. Project Terms and Conditions",
+        "content": "All projects require a detailed scope of work, timeline, and cost estimate. Changes to the approved design or scope may result in additional charges. Payment terms are specified in individual project contracts. MKL-Fitout reserves the right to retain ownership of design concepts until full payment is received."
+      },
+      "section4": {
+        "title": "4. Quality and Warranties",
+        "content": "We guarantee the quality of our workmanship for a period of 12 months from project completion. This warranty covers defects in materials and workmanship under normal use conditions. Normal wear and tear, misuse, or damage due to external factors are not covered."
+      },
+      "section5": {
+        "title": "5. Limitation of Liability",
+        "content": "MKL-Fitout's liability is limited to the contract value of the specific project. We are not liable for indirect, incidental, or consequential damages. Our total liability shall not exceed the amount paid for our services."
+      },
+      "section6": {
+        "title": "6. Intellectual Property",
+        "content": "All design concepts, drawings, and intellectual property created by MKL-Fitout remain our property until full payment is received. Clients may not reproduce or distribute our designs without written permission."
+      },
+      "section7": {
+        "title": "7. Privacy and Data Protection",
+        "content": "We respect your privacy and handle personal information in accordance with UAE data protection laws. Client information is kept confidential and used solely for project execution and communication purposes."
+      },
+      "section8": {
+        "title": "8. Governing Law",
+        "content": "These terms are governed by UAE law. Any disputes shall be resolved through the appropriate courts in the Emirate of Ajman, UAE."
+      }
+    },
+    "privacyContent": {
+      "title": "Privacy Policy",
+      "section1": {
+        "title": "1. Information We Collect",
+        "content": "We collect personal information that you provide directly to us, such as your name, email address, phone number, project details, and property information. We also collect technical information through website usage, including IP addresses and browser information."
+      },
+      "section2": {
+        "title": "2. How We Use Your Information",
+        "content": "We use your information to: provide interior design and fit-out services, communicate about your project, send project updates and invoices, improve our services, and comply with legal obligations. We do not sell your personal information to third parties."
+      },
+      "section3": {
+        "title": "3. Information Sharing",
+        "content": "We may share your information with: trusted contractors and suppliers working on your project, professional consultants (architects, engineers), payment processors, and legal authorities when required by law. All parties are bound by confidentiality agreements."
+      },
+      "section4": {
+        "title": "4. Data Security",
+        "content": "We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet is 100% secure."
+      },
+      "section5": {
+        "title": "5. Data Retention",
+        "content": "We retain your personal information for as long as necessary to provide our services and comply with legal obligations. Project-related information is typically retained for 7 years after project completion for warranty and legal purposes."
+      },
+      "section6": {
+        "title": "6. Your Rights",
+        "content": "You have the right to: access your personal information, correct inaccurate information, request deletion of your information (subject to legal obligations), object to processing, and withdraw consent where applicable. Contact us to exercise these rights."
+      },
+      "section7": {
+        "title": "7. Cookies and Tracking",
+        "content": "Our website uses cookies to improve user experience and analyze website traffic. You can control cookie settings through your browser preferences. Some features may not function properly if cookies are disabled."
+      },
+      "section8": {
+        "title": "8. Contact Information",
+        "content": "For privacy-related questions or to exercise your rights, contact us at: Email: info@mklfitout.ae, Phone: +971 50 970 0715, Address: Industrial Area, Ajman, UAE"
+      },
+      "section9": {
+        "title": "9. Updates to This Policy",
+        "content": "We may update this privacy policy from time to time. We will notify you of any material changes by posting the new policy on our website with an updated revision date."
+      }
+    }
   },
   "servicesDetail": {
     "joinery": {
