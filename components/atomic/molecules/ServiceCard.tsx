@@ -92,7 +92,7 @@ function ServiceCard({ service, index }: ServiceCardProps) {
                 </motion.ul>
 
                 {/* CTA Button */}
-                <motion.button
+                {/* <motion.button
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                     className="w-full mt-6 px-6 py-4 bg-gradient-to-r from-primary to-primary/80 text-white rounded-2xl font-semibold shadow-lg hover:shadow-xl transform transition-all duration-300 hover:from-primary/90 hover:to-primary/70 relative overflow-hidden group/btn"
@@ -104,7 +104,7 @@ function ServiceCard({ service, index }: ServiceCardProps) {
                         whileHover={{ x: '100%' }}
                         transition={{ duration: 0.6 }}
                     />
-                </motion.button>
+                </motion.button> */}
             </div>
         </motion.article>
     )

@@ -6,6 +6,7 @@ import { useLocale, useTranslations } from 'next-intl'
 import { motion } from 'motion/react'
 import { ContactForm } from './ContactForm'
 import { Mail, Phone, MapPin, Globe } from 'lucide-react'
+import { SocialLinks } from '../molecules/SocialLinks'
 
 function ContactSection({ className = '' }) {
   const t = useTranslations('contact');
@@ -39,6 +40,7 @@ function ContactSection({ className = '' }) {
               <Globe className="text-primary w-6 h-6 flex-shrink-0" />
               <a href={CONTACT_INFO.website} target="_blank" rel="noopener noreferrer" className="hover:underline">{CONTACT_INFO.website}</a>
             </div>
+            <SocialLinks className="mt-4" />
           </div>
         </motion.aside>
         {/* Main: Contact Form */}
