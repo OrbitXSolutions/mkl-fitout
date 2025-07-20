@@ -10,6 +10,8 @@ import { GallerySection } from '@/components/atomic/organisms/GallerySection'
 import { ContactSection } from '@/components/atomic/organisms/ContactSection'
 import { StatsSection } from '@/components/atomic/organisms/StatsSection'
 import { TrustBanner } from '@/components/atomic/organisms/TrustBanner'
+import { MeetFounderSection } from '@/components/atomic/organisms/MeetFounderSection'
+import { LocationSection } from '@/components/atomic/organisms/LocationSection'
 import { Feature } from '@/data/features'
 import { ServiceIconKey } from '@/components/atomic/atoms/ServiceIcons'
 
@@ -44,8 +46,9 @@ function HomePage() {
         activeCategory={selectedCategory}
         onCategoryChange={setSelectedCategory}
       />
-      {/* <StatsSection />
-      <TrustBanner /> */}
+
+      <MeetFounderSection />
+      <LocationSection />
       <DesignSection />
       <ContactSection />
     </div>

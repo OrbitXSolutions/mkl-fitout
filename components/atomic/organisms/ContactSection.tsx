@@ -24,10 +24,12 @@ function ContactSection({ className = '' }) {
         >
           <h2 className="text-2xl font-bold mb-4 text-center md:text-left">{t('infoTitle')}</h2>
           <div className="flex flex-col gap-4 w-full">
-            <div className="flex items-center gap-3 text-lg">
-              <MapPin className="text-primary w-6 h-6 flex-shrink-0" />
-              <span className="font-medium">{locale === 'ar' ? CONTACT_INFO.addressAr : CONTACT_INFO.address}</span>
-            </div>
+            <a href={CONTACT_INFO.location} target="_blank" rel="noopener noreferrer">
+              <div className="flex items-center gap-3 text-lg">
+                <MapPin className="text-primary w-6 h-6 flex-shrink-0" />
+                <span className="font-medium">{locale === 'ar' ? CONTACT_INFO.addressAr : CONTACT_INFO.address}</span>
+              </div>
+            </a>
             <div className="flex items-center gap-3 text-lg">
               <Mail className="text-primary w-6 h-6 flex-shrink-0" />
               <a href={`mailto:${CONTACT_INFO.email}`} className="hover:underline">{CONTACT_INFO.email}</a>

@@ -78,6 +78,14 @@
           "Open Plan"
         ]
       },
+      "roof-1": {
+        "alt": "Cool rooftop terrace design",
+        "tags": [
+          "Rooftop",
+          "Terrace",
+          "Outdoor"
+        ]
+      },
       "house-1": {
         "alt": "Classic house interior design",
         "tags": [
@@ -174,11 +182,75 @@
           "Modern"
         ]
       },
+      "living-room-2": {
+        "alt": "Cool modern living room design",
+        "tags": [
+          "Modern",
+          "Cool",
+          "Contemporary"
+        ]
+      },
+      "living-room-3": {
+        "alt": "Stylish living room with modern furniture",
+        "tags": [
+          "Stylish",
+          "Modern",
+          "Furniture"
+        ]
+      },
+      "living-room-4": {
+        "alt": "Contemporary living room interior",
+        "tags": [
+          "Contemporary",
+          "Interior",
+          "Modern"
+        ]
+      },
+      "living-room-5": {
+        "alt": "Elegant living room with sophisticated design",
+        "tags": [
+          "Elegant",
+          "Sophisticated",
+          "Luxury"
+        ]
+      },
+      "living-room-6": {
+        "alt": "Modern living room with clean lines",
+        "tags": [
+          "Modern",
+          "Clean",
+          "Minimalist"
+        ]
+      },
+      "living-room-7": {
+        "alt": "Contemporary living room with artistic touches",
+        "tags": [
+          "Contemporary",
+          "Artistic",
+          "Modern"
+        ]
+      },
       "office-1": {
         "alt": "Luxury office lounge area",
         "tags": [
           "Luxury",
           "Lounge",
+          "Professional"
+        ]
+      },
+      "hotel-reception-1": {
+        "alt": "Luxury hotel reception area",
+        "tags": [
+          "Luxury",
+          "Hotel",
+          "Reception"
+        ]
+      },
+      "hotel-reception-2": {
+        "alt": "Modern hotel reception design",
+        "tags": [
+          "Modern",
+          "Hotel",
           "Professional"
         ]
       },
@@ -203,6 +275,22 @@
         "tags": [
           "Modern",
           "Contemporary",
+          "Stylish"
+        ]
+      },
+      "cafe-4": {
+        "alt": "Beautiful modern restaurant interior",
+        "tags": [
+          "Beautiful",
+          "Modern",
+          "Elegant"
+        ]
+      },
+      "cafe-5": {
+        "alt": "Contemporary restaurant design",
+        "tags": [
+          "Contemporary",
+          "Modern",
           "Stylish"
         ]
       }
@@ -393,5 +481,22 @@
     },
     "learnMore": "Explore Service",
     "contact": "Contact Us"
+  },
+  "location": {
+    "title": "Our Location",
+    "subtitle": "Visit our showroom and joinery factory in Ajman Industrial Area",
+    "info": {
+      "address": "Address",
+      "phone": "Phone",
+      "email": "Email"
+    },
+    "buttons": {
+      "getDirections": "Get Directions",
+      "contactUs": "Contact Us"
+    },
+    "showroom": {
+      "title": "Visit Our Showroom",
+      "description": "Experience our craftsmanship firsthand. Our showroom showcases the latest designs and materials. Schedule a consultation to discuss your project requirements."
+    }
   }
 }

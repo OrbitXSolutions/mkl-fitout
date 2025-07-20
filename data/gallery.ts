@@ -9,6 +9,91 @@ export type GalleryImage = {
 }
 
 export const galleryImages: GalleryImage[] = [
+    // New Living Room Images
+    {
+        id: 'living-room-2',
+        src: '/images/gallary/cool-living-room.jpg',
+        alt: 'Cool modern living room design',
+        category: 'living-room',
+        tags: ['modern', 'cool', 'contemporary']
+    },
+    {
+        id: 'living-room-3',
+        src: '/images/gallary/cool-living-room2.jpg',
+        alt: 'Stylish living room with modern furniture',
+        category: 'living-room',
+        tags: ['stylish', 'modern', 'furniture']
+    },
+    {
+        id: 'living-room-4',
+        src: '/images/gallary/cool-living-room3.jpg',
+        alt: 'Contemporary living room interior',
+        category: 'living-room',
+        tags: ['contemporary', 'interior', 'modern']
+    },
+    {
+        id: 'living-room-5',
+        src: '/images/gallary/cool-living-room5.jpg',
+        alt: 'Elegant living room with sophisticated design',
+        category: 'living-room',
+        tags: ['elegant', 'sophisticated', 'luxury']
+    },
+    {
+        id: 'living-room-6',
+        src: '/images/gallary/cool-living-room6.jpg',
+        alt: 'Modern living room with clean lines',
+        category: 'living-room',
+        tags: ['modern', 'clean', 'minimalist']
+    },
+    {
+        id: 'living-room-7',
+        src: '/images/gallary/cool-living-room7.jpg',
+        alt: 'Contemporary living room with artistic touches',
+        category: 'living-room',
+        tags: ['contemporary', 'artistic', 'modern']
+    },
+
+    // Hotel Reception Images
+    {
+        id: 'hotel-reception-1',
+        src: '/images/gallary/hotel-reception.jpg',
+        alt: 'Luxury hotel reception area',
+        category: 'office',
+        tags: ['luxury', 'hotel', 'reception']
+    },
+    {
+        id: 'hotel-reception-2',
+        src: '/images/gallary/hotel-reception2.jpg',
+        alt: 'Modern hotel reception design',
+        category: 'office',
+        tags: ['modern', 'hotel', 'professional']
+    },
+
+    // Restaurant Images
+    {
+        id: 'cafe-4',
+        src: '/images/gallary/beautiful-interior-restaurant-modern-hotel.jpg',
+        alt: 'Beautiful modern restaurant interior',
+        category: 'cafe-restaurant',
+        tags: ['beautiful', 'modern', 'elegant']
+    },
+    {
+        id: 'cafe-5',
+        src: '/images/gallary/beautiful-interior-restaurant-modern-hotel2.jpg',
+        alt: 'Contemporary restaurant design',
+        category: 'cafe-restaurant',
+        tags: ['contemporary', 'modern', 'stylish']
+    },
+
+    // Roof/Outdoor Space
+    {
+        id: 'roof-1',
+        src: '/images/gallary/cool-roof.jpg',
+        alt: 'Cool rooftop terrace design',
+        category: 'apartment',
+        tags: ['rooftop', 'terrace', 'outdoor']
+    },
+
     // Apartment
     {
         id: 'apartment-1',

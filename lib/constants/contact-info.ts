@@ -3,6 +3,7 @@ export const CONTACT_INFO = {
     phone: "+971 56 352 2233",
     addressAr: "الإمارات، عجمان، عجمان الصناعية 1",
     address: "UAE, Ajman, Ajman Industrial Area 1",
+    location: "https://maps.app.goo.gl/ZyMo5VGt5EmjqVWw6",
     website: "https://mklfitout.ae",
     whatsapp: "https://wa.me/971563522233",
     instagram: "https://www.instagram.com/mkl_fitout_interior_design",

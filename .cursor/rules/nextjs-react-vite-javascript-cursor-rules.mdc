@@ -131,7 +131,8 @@ alwaysApply: true
   - Use dangerouslySetInnerHTML sparingly and only with sanitized content.
 
   Internationalization (i18n)
-  - Use next-intl for internationalization.
+  - 
+  + for internationalization.
 
   Key Conventions
   - Use 'nuqs' for URL search parameter state management.
