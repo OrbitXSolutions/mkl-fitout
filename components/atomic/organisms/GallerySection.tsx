@@ -10,6 +10,7 @@ import { ServiceIconKey } from '../atoms/ServiceIcons'
 import { galleryImages, getImagesByCategory, GalleryImage } from '@/data/gallery'
 import { cn } from '@/lib/utils'
 import { ImagePreview } from '../molecules/ImagePreview'
+import { useIsMobile } from '@/hooks/use-mobile'
 
 // Helper function to get translated image data
 function useTranslatedImages(images: GalleryImage[]) {
@@ -146,20 +147,34 @@ function GallerySection({
   const t = useTranslations('gallery')
   const [activeCategory, setActiveCategory] = React.useState<ServiceIconKey | 'all'>(initialCategory)
   const [selectedImage, setSelectedImage] = React.useState<GalleryImage | null>(null)
+  const [currentPage, setCurrentPage] = React.useState(1)
+  const isMobile = useIsMobile()
+
+  // Pagination constants
+  const IMAGES_PER_PAGE = 12
 
   // Handle category change (internal or external)
   const handleCategoryChange = (category: ServiceIconKey | 'all') => {
     setActiveCategory(category)
+    setCurrentPage(1) // Reset to first page on category change
     externalCategoryChange?.(category)
   }
 
   // Update internal state when external category changes
   React.useEffect(() => {
     setActiveCategory(initialCategory)
+    setCurrentPage(1)
   }, [initialCategory])
 
   const rawFilteredImages = getImagesByCategory(activeCategory)
   const filteredImages = useTranslatedImages(rawFilteredImages)
+
+  // Pagination logic
+  const totalPages = Math.ceil(filteredImages.length / IMAGES_PER_PAGE)
+  const paginatedImages = filteredImages.slice(
+    (currentPage - 1) * IMAGES_PER_PAGE,
+    currentPage * IMAGES_PER_PAGE
+  )
 
   return (
     <section id="gallery" className={cn("py-20 px-4 bg-gradient-to-br from-white via-gray-50 to-white", className)}>
@@ -192,14 +207,14 @@ function GallerySection({
         {/* Gallery Grid */}
         <AnimatePresence mode="wait">
           <motion.div
-            key={activeCategory}
+            key={activeCategory + '-' + currentPage}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.4 }}
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
           >
-            {filteredImages.map((image, index) => (
+            {paginatedImages.map((image, index) => (
               <GalleryItem
                 key={image.id}
                 image={image}
@@ -210,6 +225,92 @@ function GallerySection({
             ))}
           </motion.div>
         </AnimatePresence>
+
+        {/* Pagination Controls */}
+        {totalPages > 1 && (
+          <nav
+            className="flex justify-center items-center gap-2 mt-10"
+            aria-label="Gallery pagination"
+          >
+            {isMobile ? (
+              <>
+                <button
+                  onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+                  disabled={currentPage === 1}
+                  className={cn(
+                    'px-4 py-2 rounded-md border text-sm font-medium',
+                    currentPage === 1
+                      ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
+                      : 'bg-white text-gray-700 hover:bg-gray-50 border-gray-200'
+                  )}
+                  aria-label={t('prevPage')}
+                >
+                  {t('prev')}
+                </button>
+                <span className="mx-2 text-sm text-gray-500">
+                  {currentPage} / {totalPages}
+                </span>
+                <button
+                  onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
+                  disabled={currentPage === totalPages}
+                  className={cn(
+                    'px-4 py-2 rounded-md border text-sm font-medium',
+                    currentPage === totalPages
+                      ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
+                      : 'bg-white text-gray-700 hover:bg-gray-50 border-gray-200'
+                  )}
+                  aria-label={t('nextPage')}
+                >
+                  {t('next')}
+                </button>
+              </>
+            ) : (
+              <>
+                <button
+                  onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+                  disabled={currentPage === 1}
+                  className={cn(
+                    'px-3 py-1 rounded-md border text-sm font-medium',
+                    currentPage === 1
+                      ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
+                      : 'bg-white text-gray-700 hover:bg-gray-50 border-gray-200'
+                  )}
+                  aria-label={t('prevPage')}
+                >
+                  {t('prev')}
+                </button>
+                {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
+                  <button
+                    key={page}
+                    onClick={() => setCurrentPage(page)}
+                    aria-current={currentPage === page ? 'page' : undefined}
+                    className={cn(
+                      'px-3 py-1 rounded-md border text-sm font-medium',
+                      currentPage === page
+                        ? 'bg-blue-600 text-white border-blue-600'
+                        : 'bg-white text-gray-700 hover:bg-gray-50 border-gray-200'
+                    )}
+                  >
+                    {page}
+                  </button>
+                ))}
+                <button
+                  onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
+                  disabled={currentPage === totalPages}
+                  className={cn(
+                    'px-3 py-1 rounded-md border text-sm font-medium',
+                    currentPage === totalPages
+                      ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
+                      : 'bg-white text-gray-700 hover:bg-gray-50 border-gray-200'
+                  )}
+                  aria-label={t('nextPage')}
+                >
+                  {t('next')}
+                </button>
+              </>
+            )}
+          </nav>
+        )}
 
         {/* Empty state */}
         {filteredImages.length === 0 && (
