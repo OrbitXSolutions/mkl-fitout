@@ -180,7 +180,7 @@ function LocationSection() {
                                     <Button
                                         onClick={handleDirectionsClick}
                                         size={isMobile ? "default" : "lg"}
-                                        className={`w-full bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white font-semibold ${isMobile ? 'px-6 py-3 text-base' : 'px-8 py-4 text-lg'} rounded-xl shadow-lg hover:shadow-xl transition-all duration-300`}
+                                        className={`w-full bg-gradient-to-r from-secondary/80 to-secondary hover:from-primary/90 hover:to-secondary/90 text-white font-semibold ${isMobile ? 'px-6 py-3 text-base' : 'px-8 py-4 text-lg'} rounded-xl shadow-lg hover:shadow-xl transition-all duration-300`}
                                     >
                                         {t('buttons.getDirections')}
                                     </Button>

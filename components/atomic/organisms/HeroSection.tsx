@@ -70,9 +70,9 @@ function HeroSection({ className = '' }) {
             animate={{
               scale: [1, 1.08, 1],
               boxShadow: [
-                '0 0 0px 0px rgba(59,130,246,0.5)',
-                '0 0 16px 4px rgba(59,130,246,0.7)',
-                '0 0 0px 0px rgba(59,130,246,0.5)'
+                '0 0 0px 0px rgba(236, 116, 36,0.5)',
+                '0 0 16px 4px rgba(236, 116, 36,0.7)',
+                '0 0 0px 0px rgba(236, 116, 36,0.5)'
               ]
             }}
             transition={{

@@ -211,7 +211,7 @@ function MeetFounderSection() {
                                 <Button
                                     onClick={handleContactClick}
                                     size="lg"
-                                    className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white font-semibold px-8 py-4 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                                    className="bg-gradient-to-r from-secondary/70 to-secondary hover:from-primary/90 hover:to-secondary/90 text-white font-semibold px-8 py-4 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
                                 >
                                     Let's Talk
                                 </Button>

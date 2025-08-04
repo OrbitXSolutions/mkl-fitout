@@ -26,20 +26,20 @@ function ContactSection({ className = '' }) {
           <div className="flex flex-col gap-4 w-full">
             <a href={CONTACT_INFO.location} target="_blank" rel="noopener noreferrer">
               <div className="flex items-center gap-3 text-lg">
-                <MapPin className="text-primary w-6 h-6 flex-shrink-0" />
+                <MapPin className="text-secondary w-6 h-6 flex-shrink-0" />
                 <span className="font-medium">{locale === 'ar' ? CONTACT_INFO.addressAr : CONTACT_INFO.address}</span>
               </div>
             </a>
             <div className="flex items-center gap-3 text-lg">
-              <Mail className="text-primary w-6 h-6 flex-shrink-0" />
+              <Mail className="text-secondary w-6 h-6 flex-shrink-0" />
               <a href={`mailto:${CONTACT_INFO.email}`} className="hover:underline">{CONTACT_INFO.email}</a>
             </div>
             <div className="flex items-center gap-3 text-lg">
-              <Phone className="text-primary w-6 h-6 flex-shrink-0" />
+              <Phone className="text-secondary w-6 h-6 flex-shrink-0" />
               <a href={`tel:${CONTACT_INFO.phone}`} className="hover:underline">{CONTACT_INFO.phone}</a>
             </div>
             <div className="flex items-center gap-3 text-lg">
-              <Globe className="text-primary w-6 h-6 flex-shrink-0" />
+              <Globe className="text-secondary w-6 h-6 flex-shrink-0" />
               <a href={CONTACT_INFO.website} target="_blank" rel="noopener noreferrer" className="hover:underline">{CONTACT_INFO.website}</a>
             </div>
             <SocialLinks className="mt-4" />

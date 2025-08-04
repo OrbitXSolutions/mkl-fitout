@@ -33,7 +33,7 @@ function NavBar({ className = '' }) {
       initial={{ y: -40, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, type: 'spring' }}
-      className={`sticky top-0 z-50 text-white bg-blue-900/80 backdrop-blur flex items-center justify-between px-4 py-2 shadow-sm ${className}`}
+      className={`sticky top-0 z-50 text-white bg-primary backdrop-blur flex items-center justify-between px-4 py-2 shadow-sm ${className}`}
     >
       <div className="flex items-center gap-4">
         <Logo className="w-12 h-12" />

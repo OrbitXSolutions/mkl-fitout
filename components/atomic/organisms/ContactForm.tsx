@@ -3,7 +3,7 @@
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import { toast } from 'sonner'
 import { Button } from '@/components/ui/button'
 import {
@@ -18,7 +18,7 @@ import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { motion } from 'motion/react' // Ensure framer-motion is installed for motion.dev
 import { CONTACT_INFO } from '@/lib/constants/contact-info'
-import {submitContactForm } from '@/app/_actions/contact-form'
+import { submitContactForm } from '@/app/_actions/contact-form'
 import { useHookFormAction } from "@next-safe-action/adapter-react-hook-form/hooks";
 import { useAction } from 'next-safe-action/hooks'
 import { useState } from 'react'
@@ -34,33 +34,34 @@ const initialValues: ContactFormSchema = {
   message: '',
 }
 
-export function ContactForm () {
+export function ContactForm() {
   const t = useTranslations('contact');
+  const locale = useLocale()
 
   const { form, action, handleSubmitWithAction, resetFormAndAction } = useHookFormAction(
     submitContactForm,
     zodResolver(contactFormSchema),
     {
-        actionProps: {
-            onError: (error) => {
-                toast.error(t('error'), { description: t('unexpectedError') })
-            },
-            onSuccess: (data) => {
-                toast.success(t('success'), { description: t('successDesc') })
-                form.reset()
-            },
-            onSettled: () => {
-            },
+      actionProps: {
+        onError: (error) => {
+          toast.error(t('error'), { description: t('unexpectedError') })
         },
-        formProps: {
-            defaultValues: initialValues,
-            mode: 'onTouched',
+        onSuccess: (data) => {
+          toast.success(t('success'), { description: t('successDesc') })
+          form.reset()
         },
-        errorMapProps: {},
+        onSettled: () => {
+        },
+      },
+      formProps: {
+        defaultValues: initialValues,
+        mode: 'onTouched',
+      },
+      errorMapProps: {},
     }
-);
+  );
 
-  
+
   return (
     <div className="w-full max-w-xl mx-auto p-6 bg-white/80 dark:bg-neutral-900/80 rounded-2xl shadow-lg flex flex-col gap-8">
       <motion.div
@@ -106,7 +107,7 @@ export function ContactForm () {
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>{t('email')}</FormLabel>
+                <FormLabel>{locale === 'ar' ? 'البريد الإلكتروني' : 'Email'}</FormLabel>
                 <FormControl>
                   <Input type="email" placeholder={t('emailPlaceholder')} {...field} autoComplete="email" />
                 </FormControl>
@@ -151,7 +152,7 @@ export function ContactForm () {
           </motion.div>
         </form>
       </Form>
- 
+
     </div>
   )
 }
