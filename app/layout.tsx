@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
+import Script from "next/script"
 import "./globals.css"
 import { getLocale } from "next-intl/server"
 import { cookies } from "next/headers"
@@ -13,6 +14,7 @@ import { FooterSection } from "@/components/atomic/organisms/FooterSection"
 import {
   buildPageMetadata,
   getOrganizationSchema,
+  getServicesSchema,
   getWebsiteSchema,
 } from "@/lib/seo"
 
@@ -58,7 +60,11 @@ export default async function RootLayout({
 
   const locale = await getLocale();
   const dir = locale === "ar" ? "rtl" : "ltr";
-  const structuredData = [getOrganizationSchema(), getWebsiteSchema()]
+  const structuredData = [
+    getOrganizationSchema(),
+    getWebsiteSchema(),
+    getServicesSchema(),
+  ]
 
   return (
     <html lang={locale} dir={dir}>
@@ -66,6 +72,18 @@ export default async function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18136954453"
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads-tag" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-18136954453');
+          `}
+        </Script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

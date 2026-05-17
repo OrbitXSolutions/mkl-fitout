@@ -8,7 +8,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return routes.map((route) => ({
     url: `${SITE_URL}${route}`,
     lastModified,
+    alternates: {
+      languages: {
+        en: `${SITE_URL}${route === "/" ? "/?lang=en" : `${route}?lang=en`}`,
+        ar: `${SITE_URL}${route === "/" ? "/?lang=ar" : `${route}?lang=ar`}`,
+      },
+    },
     changeFrequency: route === "/" ? "weekly" : "monthly",
-    priority: route === "/" ? 1 : 0.7,
+    priority: route === "/" ? 1 : route === "/legal" ? 0.5 : 0.8,
   }))
 }

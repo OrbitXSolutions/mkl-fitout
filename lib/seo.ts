@@ -131,6 +131,7 @@ export function getOrganizationSchema() {
       addressCountry: "AE",
     },
     areaServed: ["Ajman", "Dubai", "Sharjah", "United Arab Emirates"],
+    hasMap: CONTACT_INFO.location,
     sameAs: [
       CONTACT_INFO.instagram,
       CONTACT_INFO.facebook,
@@ -150,5 +151,57 @@ export function getWebsiteSchema() {
     name: SITE_NAME,
     url: SITE_URL,
     inLanguage: ["en", "ar"],
+    publisher: {
+      "@type": "Organization",
+      name: SITE_NAME,
+      url: SITE_URL,
+    },
+  }
+}
+
+export function getServicesSchema() {
+  const services = [
+    {
+      name: "Custom Woodwork & Joinery",
+      description:
+        "Premium quality doors, wardrobes, kitchen cabinets, wall claddings, and custom furniture.",
+    },
+    {
+      name: "Interior Design & Fit-Out",
+      description:
+        "Complete turnkey interior solutions for villas, apartments, offices, clinics, restaurants, and retail spaces.",
+    },
+    {
+      name: "3D Concept Design",
+      description:
+        "Realistic 3D visualizations and conceptual designs to preview spaces before execution.",
+    },
+    {
+      name: "Full Renovation & Finishing",
+      description:
+        "Comprehensive renovation services including painting, flooring, ceilings, partitions, lighting, and electrical work.",
+    },
+  ]
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "MKL-Fitout Services",
+    url: `${SITE_URL}/services`,
+    itemListElement: services.map((service, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      item: {
+        "@type": "Service",
+        name: service.name,
+        description: service.description,
+        areaServed: "United Arab Emirates",
+        provider: {
+          "@type": "LocalBusiness",
+          name: SITE_NAME,
+          url: SITE_URL,
+        },
+      },
+    })),
   }
 }
